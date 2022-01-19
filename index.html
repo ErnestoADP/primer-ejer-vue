@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer-Desafio</title>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!--cdn Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 style="text-align: center;">Tabla </h1>
+    <div id="app">
+        <table border="solid" width="100%">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Run</th>
+                    <th scope="col">Nacimiento</th>
+                    <th scope="col">Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="usuario in usuarios">
+                    <th scope="row">{{usuario.id}}</th>
+                    <td>{{usuario.nombre}}</td>
+                    <td>{{usuario.apellido}}</td>
+                    <td>{{usuario.run}}</td>
+                    <td>{{usuario.nacimiento}}</td>
+                    <td>{{usuario.edad}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <a href="https://github.com/ErnestoADP/primer-ejer-vue.git">Github</a>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                usuarios: [{
+                    id: 1,
+                    nombre: 'ernesto',
+                    apellido: 'diaz',
+                    run: '11.111.111-1',
+                    nacimiento: '12-01-1992',
+                    edad: '29',
+                }, {
+                    id: 2,
+                    nombre: 'aaaa',
+                    apellido: 'sdfsdf',
+                    run: '11.111.111-2',
+                    nacimiento: '12-01-1991',
+                    edad: '26',
+                }, {
+                    id: 3,
+                    nombre: 'bbbb',
+                    apellido: 'lol',
+                    run: '11.111.111-3',
+                    nacimiento: '12-01-1990',
+                    edad: '25',
+                }]
+            },
+            methods: {}
+        })
+    </script>
+
+    <!--cdn Boostrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
